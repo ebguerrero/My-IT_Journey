@@ -23,7 +23,7 @@ In Part 2 of Linux Fundamentals, we move beyond the in-browser terminal and begi
 **Basic SSH Command:**
 ```bash
 ssh username@<IP>
----
+
 Replace <IP> with the machine’s IP address.
 Example: ssh tryhackme@10.10.224.147
 Password: tryhackme (for TryHackMe labs)
