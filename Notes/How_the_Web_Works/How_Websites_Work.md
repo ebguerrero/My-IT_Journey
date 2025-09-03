@@ -1,84 +1,121 @@
- How Websites Work
+
+
+````markdown
+# How Websites Work
+
+## Overview
+Websites are made up of **frontend (client-side)** code and **backend (server-side)** code.  
+When you access a website, your browser communicates with a server, retrieves resources, and renders them.
 
 ---
 
-## Overview  
-When you visit a website:  
-1. **Your browser (client-side)** makes a request to a web server.  
-2. **The server (back-end)** processes the request and sends a response.  
-3. **The browser (front-end)** renders the response as a web page for you to view.  
+## Frontend (Client-Side)
+- Runs in the **browser**.  
+- Built using:  
+  - **HTML** → Structure/content.  
+  - **CSS** → Styling and layout.  
+  - **JavaScript (JS)** → Interactivity.  
 
----
-
-## Components of a Website  
-- **Front End (Client-Side):** How the browser renders the website (HTML, CSS, JS).  
-- **Back End (Server-Side):** Where the request is processed and a response is generated.  
-
----
-
-## HTML (HyperText Markup Language)  
-HTML is the **structure** of a webpage.  
-
-Example HTML Document:
+**Example (HTML snippet):**
 ```html
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Page Title</title>
-</head>
-<body>
-  <h1>Example Heading</h1>
-  <p>Example paragraph..</p>
-</body>
+  <head>
+    <title>My Website</title>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    <p>Welcome to my site!</p>
+  </body>
 </html>
+````
 
-Key Elements:
-<!DOCTYPE html> → Defines HTML5 document.
-<html> → Root element of the page.
-<head> → Metadata (title, info).
-<body> → Main content shown in the browser.
-<h1> → Heading.
-<p> → Paragraph.
+---
 
-Attributes:
-<img src="img/cat.jpg"> → Adds images.
-<p class="bold-text">...</p> → Adds styles.
-<p id="example">...</p> → Unique identifiers.
+## Backend (Server-Side)
 
-CSS (Cascading Style Sheets)
-CSS defines the look and feel of a website.
-Controls layout, colors, fonts.
-Works alongside HTML to style content.
+* Runs on a **server**.
+* Processes requests, performs logic, interacts with databases, then sends responses to the client.
+* Common backend languages: **Python, PHP, Node.js, Ruby, Java, Go**.
 
-JavaScript (JS)
-JavaScript adds interactivity to websites.
-Example: document.getElementById("demo").innerHTML = "Hack the Planet";
+**Example (PHP snippet):**
 
-Events:
-onclick → Triggered when an element is clicked.
-Example: <button onclick='document.getElementById("demo").innerHTML="Button Clicked";'>Click Me!</button>
+```php
+<?php
+  echo "Hello, " . $_GET['name'];
+?>
+```
 
-Sensitive Data Exposure
-Occurs when websites don’t properly remove sensitive data from frontend code.
-Example: credentials left in HTML comments or JavaScript variables. 
-<!-- TODO: remove test credentials admin:password123 -->
-⚠️ Always check source code for hidden login credentials or links.
+---
 
-HTML Injection
-Happens when unfiltered input from users is injected into a webpage.
-Example: attacker adds malicious HTML or JavaScript.
-const name = document.getElementById('name').value;
-document.getElementById('welcome-msg').innerHTML = "Welcome " + name;
+## JavaScript Interactivity
 
-If input is not sanitized, a user could inject: <h1>Hacked!</h1>
+JavaScript allows pages to update dynamically without reloading.
 
-⚠️ Rule: Never trust user input. Always sanitize before rendering.
+**Example:**
 
-Summary
-Front End → Rendered by browser (HTML, CSS, JS).
-Back End → Processes requests and sends responses.
-HTML → Structure.
-CSS → Style.
-JavaScript → Interactivity.
-Sensitive Data Exposure → Avoid leaving secrets in source code.
-HTML Injection → Prevent with strong input sanitization.
+```html
+<p id="demo">Original text</p>
+<button onclick="document.getElementById('demo').innerHTML='Button Clicked';">
+  Click Me
+</button>
+```
+
+---
+
+## Sensitive Data Exposure
+
+Developers sometimes accidentally leave sensitive data in code.
+
+**Bad Example:**
+
+```html
+<!-- TODO: Remove admin test credentials: username=admin, password=12345 -->
+```
+
+⚠️ If visible in source, attackers can exploit it.
+
+**Mitigation:** Always sanitize and remove sensitive info before deployment.
+
+---
+
+## HTML Injection
+
+Occurs when user input is not sanitized and is reflected back into a page.
+
+**Malicious Example:**
+
+```html
+<script>document.location='http://attacker.com'</script>
+```
+
+⚠️ This could redirect a user or steal cookies.
+
+**Mitigation:**
+
+* Validate and sanitize user input.
+* Use output encoding.
+
+---
+
+## Lifecycle of a Website Request
+
+1. User types a URL into the browser.
+2. Browser sends a request to the server.
+3. Server processes the request.
+4. Server sends back resources (HTML, CSS, JS).
+5. Browser renders the website.
+
+---
+
+## Summary
+
+* **Frontend** → HTML, CSS, JS (what the user sees).
+* **Backend** → Server-side logic and databases.
+* JavaScript enables interactivity.
+* Poor coding practices can expose sensitive data.
+* Input must be validated to prevent HTML injection.
+
+```
+
+---
