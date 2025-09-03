@@ -144,6 +144,6 @@ By completing Linux Fundamentals Part 2, you learned:
 * File permissions and switching users
 * Important system directories (`/etc`, `/var`, `/root`, `/tmp`)
 
-````
+
 
 
