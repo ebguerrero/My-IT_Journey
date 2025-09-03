@@ -18,13 +18,13 @@ This part focuses on:
 - Encrypts data during transmission over a network.  
 
 ### Why It’s Important
-- Remote control of servers/machines  
-- Encrypted, secure communication  
+- Remote control of servers/machines.  
+- Encrypted, secure communication.  
 
 ### Basic SSH Command
 ```bash
 ssh username@<IP>
-Replace <IP> with the machine’s IP address.
+Replace <IP> with the machine's IP address.
 
 Example:
 
@@ -48,20 +48,21 @@ ls        # List visible files
 ls -a     # List all files (including hidden .file)
 ls --help # Show available options for the command
 The Man (Manual) Page
-Purpose
-The man command provides detailed documentation for system commands.
+Purpose: The man command provides detailed documentation for system commands.
 
 Example:
 
 bash
 Copy code
 man ls
-Navigation
+Navigation:
+
 Use arrow keys (↓) to scroll down
 
 Press q to quit
 
-Common Option
+Common Option:
+
 bash
 Copy code
 ls -lh
@@ -69,58 +70,46 @@ ls -lh
 
 Filesystem Interaction (Continued)
 Commands
-touch → Create a new file
-
-mkdir → Create a new directory
-
-cp → Copy a file or folder
-
-mv → Move or rename a file or folder
-
-rm → Remove a file
-
-rm -R → Remove a directory recursively
-
-file → Determine the type of a file
-
-Examples
 bash
 Copy code
-touch note
-mkdir mydirectory
-cp note note2
-mv note2 note3
-rm note
-rm -R mydirectory
-file note
+touch note        # Create a new file
+mkdir mydirectory # Create a new directory
+cp note note2     # Copy a file
+mv note2 note3    # Move or rename a file
+rm note           # Remove a file
+rm -R mydirectory # Remove a directory recursively
+file note         # Determine the type of a file
 Permissions 101
-Permission Types
+Permission Types:
+
 Read (r): View file contents
 
 Write (w): Modify or delete file
 
 Execute (x): Run file as a program/script
 
-Viewing Permissions
+Viewing permissions:
+
 bash
 Copy code
 ls -lh
 Users & Groups
 Linux permissions can be granular. Each file/folder has an owner and a group.
 
-Switching Users
+Switching Users:
+
 bash
 Copy code
-su <username>     # Switch to another user
-su -l <username>  # Switch with full login environment
+su <username>    # Switch to another user
+su -l <username> # Switch with full login environment
 Common Directories
-/etc → System configuration files (passwd, shadow, sudoers)
+/etc → System configuration files (passwd, shadow, sudoers).
 
-/var → Variable data (e.g., logs under /var/log)
+/var → Variable data (e.g., logs under /var/log).
 
-/root → Home directory of the root user
+/root → Home directory of the root user.
 
-/tmp → Temporary files (cleared on reboot, accessible by all users)
+/tmp → Temporary files (cleared on reboot, accessible by all users).
 
 Summary
 By completing Linux Fundamentals Part 2, you learned:
