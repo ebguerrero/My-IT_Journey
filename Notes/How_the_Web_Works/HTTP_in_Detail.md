@@ -1,6 +1,4 @@
-Perfect 👍 let’s start with **HTTP\_in\_detail.md**, fully reformatted so it matches the clean style of **Linux Fundamentals Part 2**.
 
-Here’s the corrected Markdown — you can copy/paste the whole thing as-is:
 
 ````markdown
 # HTTP in Detail
