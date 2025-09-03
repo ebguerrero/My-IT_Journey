@@ -146,12 +146,4 @@ By completing Linux Fundamentals Part 2, you learned:
 
 ````
 
----
 
-✅ This version will paste **as-is** with:  
-- Proper bold (`**text**`)  
-- Proper inline code (``ls -lh``)  
-- Proper fenced blocks for commands (` ```bash ... ``` `)  
-
-Do you want me to also give you a **preview screenshot mockup** (how GitHub will render this) so you can compare before pasting it?
-````
