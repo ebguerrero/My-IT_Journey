@@ -1,12 +1,4 @@
-Got it 👍 — that’s exactly what I did in the last message, but I see where it was confusing. Let me be crystal clear:
 
-The reason you saw *“bash Copy code”* in your repo before is because **GitHub auto-generated that button inside unfenced text**. If I don’t wrap things in triple backticks `…`, GitHub interprets it weirdly.
-
-So here’s the **fully fixed .md** with all the code blocks fenced properly. You can copy everything between the very first `# Linux Fundamentals Part 2` and the very last three backticks — paste it into GitHub — and it will render perfectly:
-
----
-
-````markdown
 # Linux Fundamentals Part 2
 
 ## Introduction
