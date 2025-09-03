@@ -153,7 +153,3 @@ POST /login (username=thm, password=letmein) → THM{HTTP_REQUEST_MASTER}
 
 ---
 
-✅ Now it will render just like Linux Fundamentals Part 2 — with clear headers, inline code shading, and clean fenced blocks.  
-
-Would you like me to fix **How_Websites_Work.md** next in the same style?
-```
