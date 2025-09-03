@@ -22,7 +22,6 @@ This part focuses on:
 - Encrypted, secure communication.  
 
 ### Basic SSH Command
-```bash
 ssh username@10.10.224.147
 
 
