@@ -291,10 +291,6 @@ This part taught you:
 * [Bash Scripting](https://tryhackme.com/room/bashscripting)
 * [Regular Expressions](https://tryhackme.com/room/catregex)
 
----
 
-```
-
----
 
 
