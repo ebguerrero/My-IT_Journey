@@ -1,5 +1,4 @@
 
-````markdown
 # Linux Fundamentals Part 3
 
 ## Introduction
