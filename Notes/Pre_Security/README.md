@@ -42,4 +42,4 @@ This section serves as the **pre-requisite learning** before moving on to **Cybe
 
 ---
 
-📌 *Status:* **Complete** — ✅ Ready to move to Cyber Security 101!
+
