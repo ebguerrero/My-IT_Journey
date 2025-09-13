@@ -1,6 +1,5 @@
 
 
-````markdown
 # How Websites Work
 
 ## Overview
