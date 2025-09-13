@@ -115,9 +115,6 @@ Occurs when user input is not sanitized and is reflected back into a page.
 * Poor coding practices can expose sensitive data
 * Input must be validated to prevent HTML injection
 
-```
-
----
 
 
 
