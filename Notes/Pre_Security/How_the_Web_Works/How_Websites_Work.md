@@ -11,10 +11,10 @@ When you access a website, your browser communicates with a server, retrieves re
 
 ## Frontend (Client-Side)
 - Runs in the **browser**.  
-- Built using:  
-  - **HTML** → Structure/content.  
-  - **CSS** → Styling and layout.  
-  - **JavaScript (JS)** → Interactivity.  
+- Built using:
+  - **HTML** → Structure/content  
+  - **CSS** → Styling and layout  
+  - **JavaScript (JS)** → Interactivity  
 
 **Example (HTML snippet):**
 ```html
@@ -36,7 +36,7 @@ When you access a website, your browser communicates with a server, retrieves re
 
 * Runs on a **server**.
 * Processes requests, performs logic, interacts with databases, then sends responses to the client.
-* Common backend languages: **Python, PHP, Node.js, Ruby, Java, Go**.
+* Common backend languages: **Python, PHP, Node.js, Ruby, Java, Go**
 
 **Example (PHP snippet):**
 
@@ -110,12 +110,15 @@ Occurs when user input is not sanitized and is reflected back into a page.
 
 ## Summary
 
-* **Frontend** → HTML, CSS, JS (what the user sees).
-* **Backend** → Server-side logic and databases.
-* JavaScript enables interactivity.
-* Poor coding practices can expose sensitive data.
-* Input must be validated to prevent HTML injection.
+* **Frontend** → HTML, CSS, JS (what the user sees)
+* **Backend** → Server-side logic and databases
+* JavaScript enables interactivity
+* Poor coding practices can expose sensitive data
+* Input must be validated to prevent HTML injection
 
 ```
 
 ---
+
+
+
