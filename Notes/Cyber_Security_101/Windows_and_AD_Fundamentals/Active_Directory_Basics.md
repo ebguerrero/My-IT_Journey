@@ -148,7 +148,4 @@ Challenge–response flow:
 
 ---
 
-```
-
-If you want me to reformat **Search_Skills.md** in the exact same style too (same section order & headings), I can do that next.
 
