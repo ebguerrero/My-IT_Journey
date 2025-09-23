@@ -1,11 +1,4 @@
-Got it — thanks for calling that out. I rewrote **Active\_Directory\_Basics.md** to match the exact “Pre-Security lesson” style you used for DNS/HTTP (clear H1, “Overview,” task-like sections with short bullets, examples, code blocks, “Key Terms,” “Practice,” and a closing “Summary”).
-Just copy-paste this into:
 
-`Notes/Cyber_Security_101/Windows_and_AD_Fundamentals/Active_Directory_Basics.md`
-
----
-
-````markdown
 # Active Directory Basics
 
 ---
@@ -158,4 +151,4 @@ Challenge–response flow:
 ```
 
 If you want me to reformat **Search_Skills.md** in the exact same style too (same section order & headings), I can do that next.
-```
+
