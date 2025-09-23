@@ -1,69 +1,71 @@
 
 # Active Directory Basics
 
----
-
-## Overview
-Active Directory (AD) centralizes identity and access management in Windows environments.  
-It lets admins manage **users, computers, groups, policies,** and **authentication** from one place.
+Learn the fundamentals of Microsoft Active Directory (AD), how it organizes users, computers, and resources, and why it’s essential in enterprise networks.
 
 ---
 
-## Windows Domains
-- **Domain:** Logical boundary that groups users/computers for shared authentication & policy.
-- **Domain Controller (DC):** Server that runs **AD DS** and handles logons & directory queries.
-- **Central store:** Credentials and objects are kept in the directory instead of on each PC.
+## 🎯 Learning Objectives
+This room will teach you to:
 
-**Real-world:** Rather than configuring 300 machines one by one, you manage them from the DC.
-
----
-
-## Active Directory Objects
-- **Users** – People or services that sign in (security principals).
-- **Computers** – Each domain-joined machine has an account (e.g., `PC1$`).
-- **Groups** – Collect users/computers to grant permissions at once.
-- **Organizational Units (OUs)** – Containers to organize objects and **scope policies**.
-- **Common built-in groups:**
-  - **Domain Admins** – Admin over the domain.
-  - **Server Operators, Backup Operators, Account Operators**
-  - **Domain Users, Domain Computers, Domain Controllers**
+- Understand what Active Directory is
+- Learn about domains, domain controllers, and objects
+- Explore how computers and users are managed
+- Configure and apply Group Policy Objects (GPOs)
+- Understand authentication methods (Kerberos & NTLM)
+- Learn about domains, trees, forests, and trusts
 
 ---
 
-## Managing Users in AD
-Tool: **Active Directory Users and Computers (ADUC)**  
-- Create/disable users, reset passwords, move objects between OUs.
-- **Delegation:** Grant limited rights (e.g., Helpdesk resets passwords for Sales OU).
+## 📝 Task 1 - Introduction to Active Directory
+Active Directory (AD) centralizes **identity and access management** in Windows environments.  
+It lets admins manage users, computers, groups, policies, and authentication all in one place.
 
-**PowerShell examples:**
+- **Domain Controller (DC):** A server that runs AD DS and handles logins + directory services.  
+- **Domain:** Logical boundary grouping computers/users under shared policies.  
+- **Benefit:** Instead of configuring 200 PCs separately, manage them centrally from the DC.  
+
+---
+
+## 📝 Task 2 - Active Directory Objects
+Everything in AD is stored as an **object**.
+
+- **Users** – People with accounts and credentials.  
+- **Computers** – Each device in the domain (e.g., `PC01`).  
+- **Groups** – Bundle users/computers for shared permissions.  
+- **OUs (Organizational Units)** – Containers that hold objects; help apply policies.  
+
+**Key Terms:**  
+- `Domain Admins` – Highest-privileged group in the domain.  
+- `Server Operators`, `Backup Operators`, `Account Operators` – Specialized roles.  
+
+---
+
+## 📝 Task 3 - Managing Computers in AD
+- New computers join the default **Computers** container.  
+- Best practice: Move them into separate **OUs**:  
+  - Workstations  
+  - Servers  
+  - Domain Controllers  
+
+**Example PowerShell:** Resetting a password and forcing change at next login:
 ```powershell
-# Reset a user password and force change at next logon
 Set-ADAccountPassword -Identity sophie -Reset -NewPassword (Read-Host -AsSecureString "New Password")
 Set-ADUser -Identity sophie -ChangePasswordAtLogon $true
 ````
 
 ---
 
-## Managing Computers in AD
+## 📝 Task 4 - Group Policy (GPO)
 
-* New domain members land in **Computers** container by default.
-* Best practice: move into purpose OUs:
+Policies that control **users** and/or **computers**.
 
-  * **Workstations**
-  * **Servers**
-  * **Domain Controllers**
-* Separate OUs ⇒ different security baselines per device type.
+* **Created in:** Group Policy Management
+* **Linked to:** OUs (or domain)
+* **Examples:** Password length, restrict Control Panel, auto-lock after inactivity
+* **Replication:** Stored in `SYSVOL` share, replicated to DCs
 
----
-
-## Group Policy (GPO)
-
-* **What:** Settings that apply to **users** and/or **computers**.
-* **Where:** Create in **Group Policy Management**; **link** to OUs (or domain).
-* **Examples:** Password policy, restrict Control Panel, auto-lock after inactivity.
-* **Replication:** Policies live under the **SYSVOL** share and replicate to DCs.
-
-**Force refresh on a machine:**
+**Force update on a machine:**
 
 ```powershell
 gpupdate /force
@@ -71,81 +73,76 @@ gpupdate /force
 
 ---
 
-## Authentication Methods
+## 📝 Task 5 - Authentication Methods
 
 ### Kerberos (default in modern domains)
 
-Ticket-based flow:
+Ticket-based system. Steps:
 
-1. Client requests **TGT** from the **KDC** (on the DC).
-2. KDC returns **TGT** + **Session Key**.
-3. Client requests a **TGS** for a specific service (uses Session Key + SPN).
-4. KDC returns **TGS** (encrypted to the service).
-5. Client presents **TGS** to the service and authenticates.
+1. Client requests a **TGT** from the **KDC** (Domain Controller).
+2. KDC sends back TGT + Session Key.
+3. Client requests **TGS** for a service (uses Session Key + SPN).
+4. KDC issues TGS (encrypted).
+5. Client presents TGS → gains access.
 
-**Notes:** No password transmitted; relies on shared secrets and tickets.
+✅ Secure: No passwords sent, relies on tickets.
 
 ### NTLM / NetNTLM (legacy)
 
-Challenge–response flow:
+Challenge-response system:
 
 1. Client asks to authenticate.
-2. Server sends a **challenge**.
-3. Client computes a **response** from the challenge + password hash.
-4. Server verifies via the DC.
+2. Server sends a random **challenge**.
+3. Client hashes (password + challenge).
+4. Server/DC verifies.
 5. Access allowed/denied.
 
-**Notes:** Kept for compatibility; less secure than Kerberos.
+⚠️ Less secure, kept for compatibility.
 
 ---
 
-## Trees, Forests, and Trusts
+## 📝 Task 6 - Trees, Forests, and Trusts
 
-* **Tree:** Domains sharing a namespace (e.g., `thm.local`, `uk.thm.local`, `us.thm.local`).
+* **Tree:** Domains that share a namespace (e.g., `thm.local`, `uk.thm.local`, `us.thm.local`).
 * **Forest:** Multiple trees with different namespaces (e.g., `thm.local` + `mht.local`).
-* **Trusts:** Let users in one domain access resources in another.
+* **Trusts:** Allow cross-domain access.
 
-  * **One-way trust:** A → B (A trusts B).
-  * **Two-way trust:** Mutual.
-
----
-
-## Key Terms
-
-* **AD DS** – Active Directory Domain Services (directory service on DCs).
-* **DC** – Domain Controller.
-* **OU** – Organizational Unit (policy/application boundary).
-* **GPO** – Group Policy Object (settings for users/computers).
-* **SYSVOL** – DC share that stores/logically replicates GPOs.
-* **SPN** – Service Principal Name (Kerberos target).
-* **TGT/TGS** – Kerberos tickets (granting / service).
+  * One-way trust: A → B (A trusts B).
+  * Two-way trust: Both domains trust each other.
 
 ---
 
-## Practice Examples
+## 📝 Key Terms
 
-* **In a Windows domain, credentials are stored in…** → *Active Directory*
-* **The server that runs AD services is called…** → *Domain Controller*
-* **Which group typically administers everything in a domain?** → *Domain Admins*
-* **Machine account name for `TOM-PC`** → *`TOM-PC$`*
-* **Create separate OUs for Servers and Workstations?** → *Yes*
-* **Network share that distributes GPOs** → *`SYSVOL`*
-* **Can a single GPO target users and computers?** → *Yes (with respective sections)*
-* **Is NTLM the default auth in modern domains?** → *No (Kerberos is)*
-* **Kerberos ticket that lets you request other tickets** → *TGT*
-* **Is a user’s password sent over the network with NTLM?** → *No*
-* **Group of domains sharing a namespace** → *Tree*
-* **Needed for cross-domain access A ↔ B** → *Trust relationship*
+* **AD DS** – Active Directory Domain Services
+* **DC** – Domain Controller
+* **OU** – Organizational Unit
+* **GPO** – Group Policy Object
+* **SYSVOL** – DC share that replicates GPOs
+* **SPN** – Service Principal Name
+* **TGT/TGS** – Kerberos tickets
 
 ---
 
-## Summary
+## 📝 Practice Examples
 
-* AD centralizes **accounts, machines, groups, and policies** on **Domain Controllers**.
-* Use **OUs** to organize and scope **GPOs** to the right users/computers.
-* **Kerberos** is the default (tickets), **NTLM** is legacy (challenge/response).
-* Multi-domain environments form **trees/forests** and rely on **trusts** for access.
+* In a Windows domain, credentials are stored in… → **Active Directory**
+* The server that runs AD services is called… → **Domain Controller**
+* Which group administers everything in a domain? → **Domain Admins**
+* Default container new machines go into? → **Computers**
+* Should you separate OUs for servers and workstations? → **Yes**
+* Network share that distributes GPOs? → **SYSVOL**
+* Default authentication protocol? → **Kerberos**
+* Legacy protocol still supported? → **NTLM**
+* Group of domains sharing a namespace? → **Tree**
+* Needed for cross-domain access? → **Trust**
 
 ---
 
+## ✅ Summary
 
+* Active Directory centralizes accounts, computers, groups, and policies.
+* Domains are managed by Domain Controllers.
+* OUs + GPOs let you apply policies to the right users/computers.
+* Kerberos = modern secure authentication, NTLM = legacy fallback.
+* Trees, forests, and trusts let companies expand across multiple domains.
