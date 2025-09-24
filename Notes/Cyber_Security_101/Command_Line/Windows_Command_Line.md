@@ -1,12 +1,13 @@
 
-# Windows Command Line
+# 💻 Windows Command Line  
 
-Learn the essential Windows commands.
+Learn the essential Windows commands.  
 
 ---
 
-## 📝 Learning Objectives
-This room will teach you how to:
+## 🎯 Learning Objectives  
+
+This room will teach you how to:  
 
 - Display basic system information  
 - Check and troubleshoot network configuration  
@@ -15,21 +16,23 @@ This room will teach you how to:
 
 ---
 
-## Task 1 - Introduction
-Everyone prefers a GUI until they master a command-line interface (CLI).  
+## 📝 Task 1 – Introduction  
 
-Advantages of CLI:
+Everyone prefers a GUI until they master a command-line interface (CLI).  
+Advantages of CLI:  
+
 - **Lower resource usage** – Uses fewer system resources than GUIs.  
 - **Automation** – Batch files and scripts simplify repeated tasks.  
-- **Remote management** – Convenient for SSH into servers, routers, IoT devices.  
+- **Remote management** – Convenient for SSH access to servers, routers, IoT devices.  
 
-**Default Windows CLI:** `cmd.exe`
+**Default Windows CLI:** `cmd.exe`  
 
 ---
 
-## Task 2 - Basic System Information
+## 📝 Task 2 – Basic System Information  
 
-### Commands
+### Commands  
+
 ```cmd
 set
 ````
@@ -57,9 +60,9 @@ systeminfo
 
 ---
 
-## Task 3 - Network Troubleshooting
+## 📝 Task 3 – Network Troubleshooting
 
-### Network Configuration
+### 🌐 Network Configuration
 
 ```cmd
 ipconfig
@@ -73,7 +76,7 @@ ipconfig /all
 
 * Full network details: MAC, DHCP, DNS.
 
-### Connectivity
+### 🔌 Connectivity
 
 ```cmd
 ping example.com
@@ -103,53 +106,58 @@ netstat
 netstat -abom
 ```
 
-* Show connections + process names + PIDs.
+* Shows connections with process info.
 
 ---
 
-## Task 4 - File and Disk Management
+## 📝 Task 4 – File and Disk Management
 
-### Directory Navigation
+### 📂 Working With Directories
 
 ```cmd
 cd
 ```
 
-* Change directory.
+* Change directory / show current location.
 
 ```cmd
 dir
 ```
 
-* List contents.
+* List contents of current directory.
+* Options: `/a` (hidden/system files), `/s` (all subdirectories).
 
 ```cmd
 tree
 ```
 
-* Display directory structure visually.
-
-### Create / Delete Directories
+* Display subdirectory structure visually.
 
 ```cmd
-mkdir foldername
+mkdir folder_name
 ```
 
 * Create a directory.
 
 ```cmd
-rmdir foldername
+rmdir folder_name
 ```
 
 * Remove a directory.
 
-### File Operations
+### 📄 Working With Files
 
 ```cmd
 type file.txt
 ```
 
-* Show file contents.
+* Show contents of a text file.
+
+```cmd
+more file.txt
+```
+
+* View long text files page by page.
 
 ```cmd
 copy file1.txt file2.txt
@@ -158,7 +166,7 @@ copy file1.txt file2.txt
 * Copy file.
 
 ```cmd
-move file1.txt newfolder\
+move file1.txt file2.txt
 ```
 
 * Move file.
@@ -169,55 +177,61 @@ del file.txt
 
 * Delete file.
 
-Supports wildcards:
-
 ```cmd
-copy *.md C:\Markdown
+erase file.txt
 ```
+
+* Delete file (same as `del`).
+
+**Tip:** Use `*` as a wildcard (e.g., `copy *.md C:\Markdown`).
 
 ---
 
-## Task 5 - Task and Process Management
+## 📝 Task 5 – Task and Process Management
 
-### View Processes
+### Commands
 
 ```cmd
 tasklist
 ```
 
-* Lists all processes.
+* List running processes.
 
 ```cmd
 tasklist /FI "imagename eq notepad.exe"
 ```
 
-* Filter for a specific process.
-
-### Kill Process
+* Filter tasks by name.
 
 ```cmd
-taskkill /PID 1516
+taskkill /PID 1234
 ```
 
-* Kill by PID.
+* Kill process by PID.
 
 ```cmd
-taskkill /IM notepad.exe
+taskkill /FI "imagename eq sshd.exe"
 ```
 
-* Kill by process name.
+* Kill processes by name filter.
 
 ---
 
-## Task 6 - Conclusion
+## 📝 Task 6 – Conclusion
 
-Other useful commands:
+Additional useful commands:
 
-* `chkdsk` – Checks file system and disks for errors/bad sectors.
-* `driverquery` – Lists installed drivers.
-* `sfc /scannow` – Scans and repairs system files.
+* `chkdsk` – Check file system and disk volumes.
+* `driverquery` – List installed device drivers.
+* `sfc /scannow` – Scan and repair system files.
 
-### Shutdown / Restart
+**Reminder:**
+
+* Use `more file.txt` to display text files.
+* Pipe long output: `some_command | more`
+* Use `/ ?` with most commands to view help.
+
+### 🔑 Shutdown Commands
 
 ```cmd
 shutdown /s
@@ -236,12 +250,3 @@ shutdown /a
 ```
 
 * Abort scheduled shutdown.
-
----
-
-## ✅ Key Takeaways
-
-* CLI is lightweight, automatable, and remote-friendly.
-* Commands exist for system info, networking, files, and processes.
-* `/?` shows help for most commands.
-* Use `shutdown`, `tasklist`, `taskkill`, `ipconfig`, `netstat` for practical system control.
