@@ -26,4 +26,6 @@ Personal note: To better understand the materials, google search the topic at ha
 - Research outside of study guide to better understand the material at hand
 ---
 
+
+Will be updating this daily... currently multitasking
 _Last updated: {{today}}_
