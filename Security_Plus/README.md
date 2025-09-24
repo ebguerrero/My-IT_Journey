@@ -1,6 +1,6 @@
 # CompTIA Security+ (SY0-701) — Study Notes
 
-Short, exam-focused notes distilled from my study guide to match my TryHackMe “Pre-Security” note style:
+Short, exam-focused notes distilled from my study guide:
 - Concise bullets
 - “Key Terms” and “Practice Prompts”
 - Links to topic files
@@ -9,11 +9,11 @@ Short, exam-focused notes distilled from my study guide to match my TryHackMe �
 
 ## 📚 What’s inside
 
-1. **[01 – Fundamentals of Security](01_Fundamentals_of_Security.md)**
-2. **[02 – Threat Actors & Vectors](02_Threat_Actors_and_Vectors.md)**
-3. **[03 – Physical Security](03_Physical_Security.md)**
-4. **[04 – Social Engineering](04_Social_Engineering.md)**
-5. **[05 – Malware](05_Malware.md)**
+**[01 – Fundamentals of Security](01_Fundamentals_of_Security.md)**
+**[02 – Threat Actors & Vectors](02_Threat_Actors_and_Vectors.md)**
+**[03 – Physical Security](03_Physical_Security.md)**
+**[04 – Social Engineering](04_Social_Engineering.md)**
+**[05 – Malware](05_Malware.md)**
 
 ---
 
