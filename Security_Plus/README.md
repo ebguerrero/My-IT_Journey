@@ -6,6 +6,7 @@ This folder contains condensed, exam-focused notes derived from my Dion Training
 - "Key Terms" and "Practice Prompts"
 - Files ordered to follow Dion's flow (no surprises)
 
+Personal note: To better understand the materials, google search the topic at hand and solidify your understanding through multiple sources. 
 ---
 
 ## 📚 What's inside 
