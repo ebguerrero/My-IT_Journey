@@ -1,55 +1,48 @@
-# 02 — Threat Actors & Vectors
-
-Who attacks, why they attack, and how they get in.
-
----
+# 02 – Threat Actors & Vectors
 
 ## 🎯 Learning Objectives
-- Identify types of **threat actors** and their motivations.  
-- Describe common **attack vectors** and what makes up an **attack surface**.  
-- Understand deception defenses (honeypots, honeytokens).
+- Identify **types of threat actors**, their motivations, and sophistication.
+- Explain **threat vectors** and **attack surfaces**.
+- Understand **deception technologies** like honeypots.
 
 ---
 
-## Task 1 — Threat Actor Types
-- **Script kiddies** — low skill, reuse tools.  
-- **Hacktivists** — ideology-driven.  
-- **Organized crime** — financially motivated (ransomware, fraud).  
-- **Nation-state / APT** — long-term espionage, high sophistication.  
-- **Insiders** — negligent or malicious employees/contractors.
+## Types of Threat Actors
+- **Script Kiddies** → low skill, use pre-made tools.
+- **Hacktivists** → politically/ideologically motivated.
+- **Organized Crime** → profit-driven (fraud, ransomware).
+- **Nation-state/APT** → well-resourced, strategic, long dwell time.
+- **Insiders** → malicious, negligent, or compromised employees/contractors.
 
-**Motivations**: money, espionage, disruption, ideology, personal grievance.
-
----
-
-## Task 2 — Attack Vectors
-- Email (phishing), web apps (XSS, SQLi), removable media, cloud misconfig, weak credentials, RDP/SMB, open ports, insecure Wi-Fi/Bluetooth, supply chain.
-- **Fileless attacks** use legit processes (PowerShell, WMI).
+**Motives**: financial gain, espionage, disruption, revenge, ideology, warfare.
 
 ---
 
-## Task 3 — Attack Surface & Reduction
-- **Attack surface** = all entry/interaction points (ports, services, accounts).  
-- Reduce surface: disable unused services, patch, network segmentation, least privilege, inventory.
+## Threat Vectors
+- **Email, SMS, Web, Images, Files, Removable Media**
+- **Wireless** (insecure Wi-Fi, Bluetooth)
+- **Physical** access
+- **Supply chain** compromises
+
+**Attack Surface** = total possible entry/exit points.  
+→ Minimize by disabling unused services, restricting access, hardening configs.
 
 ---
 
-## Task 4 — Deception Techniques
-- **Honeypots/honeynets**, **honeytokens** (fake credentials/files), decoy services.  
-- Use for early detection & to study attacker TTPs.
+## Deception & Disruption
+- **Honeypots/Honeynets** → lure attackers, log actions.
+- **Honeyfiles/Tokens** → fake sensitive data.
+- **Bogus DNS entries** / decoy directories.
+- **Spoofed telemetry** or false flags.
 
 ---
 
-## Key Terms
-- TTP (Tactics, Techniques, Procedures), APT, phishing, watering hole, supply-chain attack, fileless
+## 📝 Key Terms
+APT, Insider Threat, Threat Vector, Attack Surface, Honeypot, Honeyfile
 
 ---
 
-## Practice Prompts
-- List 5 common attack vectors and one control to reduce each.  
-- Explain the difference between an attack vector and the attack surface.  
-- Name two deception tools and what they detect.
-
----
-
-> Notes: condensed from Dion’s Security+ guide.
+## 🧩 Practice Prompts
+- Compare threat actor motivations for hacktivists vs nation-states.  
+- Define the difference between a **vector** and **attack surface**.  
+- What role does a honeypot play in defense?  
