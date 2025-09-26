@@ -1,62 +1,63 @@
-# 01 – Fundamentals of Security
+# 01 — Fundamentals of Security
 
 ## 🎯 Learning Objectives
-- Compare and contrast **security control categories** and **control types**.
-- Explain **CIA Triad** and supporting concepts (Non-repudiation, AAA).
-- Define **risk, threats, vulnerabilities**, and **Zero Trust**.
+- Differentiate between **security controls** (categories vs. types).  
+- Explain the **CIA triad**, **AAA**, and **non-repudiation**.  
+- Summarize **Zero Trust** and basic security principles.  
+- Define **threats, vulnerabilities, and risk**.
 
 ---
 
-## Core Concepts
-- **Information Security**: protection of data from unauthorized access, alteration, disclosure, or destruction.  
-- **CIA Triad**:
-  - **Confidentiality** → keeping data secret (e.g., encryption).
-  - **Integrity** → ensuring data is accurate/unaltered (e.g., hashing).
-  - **Availability** → ensuring systems/data are available (e.g., redundancy, backups).
-- **Non-repudiation**: cannot deny sending/receiving (e.g., digital signatures).
-- **AAA**: Authentication, Authorization, Accounting.
+## Task 1 – Core Concepts
+- **Information Security** = protecting confidentiality, integrity, and availability of data.  
+- **CIA Triad**:  
+  - **Confidentiality** → Prevent unauthorized disclosure (encryption, access controls).  
+  - **Integrity** → Ensure data accuracy/consistency (hashing, digital signatures).  
+  - **Availability** → Systems/data are accessible when needed (redundancy, backups).  
+- **Non-repudiation** → Ensure proof of origin (digital signatures/logging).  
+- **AAA** → Authentication (prove identity), Authorization (what user can do), Accounting (audit/log actions).
 
 ---
 
-## Security Controls
-- **Categories**:
-  - **Managerial** → policies, governance, risk mgmt.
-  - **Operational** → processes, awareness, incident response.
-  - **Technical** → software/hardware (firewalls, EDR, encryption).
-  - **Physical** → locks, fences, guards.
-- **Types**:
-  - Preventive
-  - Detective
-  - Corrective
-  - Deterrent
-  - Compensating
-  - Directive  
+## Task 2 – Security Controls
+**Categories (where control is applied):**
+- **Technical**: hardware/software (firewalls, IDS, encryption).  
+- **Managerial**: policies, governance, risk management.  
+- **Operational**: day-to-day processes (change mgmt, training).  
+- **Physical**: locks, barriers, guards, lighting.
 
-💡 **Tip**: Category = who/where, Type = what it does.
-
----
-
-## Risk, Threat, Vulnerability
-- **Threat** → potential cause of harm.
-- **Vulnerability** → weakness exploitable by a threat.
-- **Risk** = Threat × Vulnerability.  
-  → If one is missing, risk ≈ 0.
+**Types (intent of the control):**
+- **Preventive** → Stop an incident (firewall, patching).  
+- **Detective** → Identify an incident (IDS, logs).  
+- **Corrective** → Fix issue post-incident (restore from backup).  
+- **Deterrent** → Discourage attacks (warning signs, camera domes).  
+- **Compensating** → Alternate safeguard when primary isn’t feasible.  
+- **Directive** → Define expected behavior (policies, SOPs).
 
 ---
 
-## Zero Trust
-Principle: **“Never trust, always verify.”**  
-- **Control plane**: authentication, policy engines, secure zones.  
-- **Data plane**: subjects, enforcement points, continuous validation.  
+## Task 3 – Threats, Vulnerabilities, Risk
+- **Threat** = something with potential to cause harm.  
+- **Vulnerability** = weakness or flaw.  
+- **Risk** = likelihood × impact of a threat exploiting a vulnerability.  
+  - No vulnerability or no threat = no risk.
 
 ---
 
-## 📝 Key Terms
-CIA, Non-repudiation, AAA, Zero Trust, Policy Engine, PEP, Preventive/Detective controls
+## Task 4 – Zero Trust
+- Principle = “Never trust, always verify.”  
+- Every request revalidated, least-privileged access enforced.  
+- **Control plane** = policy decisions, identity, monitoring.  
+- **Data plane** = systems/transactions where controls are applied.
 
 ---
 
-## 🧩 Practice Prompts
-- Give examples of Confidentiality, Integrity, and Availability controls.  
-- List the 4 categories of controls with one example each.  
-- Define risk in terms of threat and vulnerability.  
+## Key Terms
+CIA, AAA, Non-repudiation, Zero Trust, Least Privilege, Separation of Duties
+
+---
+
+## Practice Prompts
+- Explain the CIA triad with an example for each.  
+- List 4 categories of security controls and give one example.  
+- Contrast **threat** vs. **vulnerability** vs. **risk**.
