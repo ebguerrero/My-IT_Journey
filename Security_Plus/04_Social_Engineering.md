@@ -1,51 +1,52 @@
-# 04 – Social Engineering
+# 04 — Social Engineering
 
 ## 🎯 Learning Objectives
-- Understand **psychological triggers** used by attackers.
-- Recognize **phishing types**.
-- Identify additional tactics (dumpster diving, shoulder surfing).
+- Explain psychological triggers used in attacks.  
+- Identify phishing techniques and impersonation strategies.  
+- Recognize other social engineering tactics.
 
 ---
 
-## People Hacking
-- Exploits **human psychology**.  
-- Triggers: Authority, Urgency, Scarcity, Likability, Fear, Social Proof.
+## Task 1 – Human Exploitation
+- **Authority** → attacker pretends to be in charge.  
+- **Urgency** → “act fast” pressure.  
+- **Social Proof** → “everyone else is doing it.”  
+- **Scarcity** → “limited availability.”  
+- **Fear** → consequences for non-compliance.  
+- **Likability** → attacker builds rapport.
 
 ---
 
-## Common Tactics
-- **Impersonation** → posing as trusted individual.
-- **Pretexting** → partial truth, victim fills in gaps.
-- **Brand impersonation** → fake logos, emails.
-- **Typosquatting** → fake lookalike domains.
-- **Watering Hole Attack** → compromise sites visited by target group.
+## Task 2 – Impersonation
+- **Person Impersonation** → Pretending to be a colleague/authority.  
+- **Brand Impersonation** → Fake logos/emails.  
+- **Typosquatting** → Registering misspelled domains.  
+- **Watering Hole** → Compromising a trusted site.  
+- **Pretexting** → Providing believable story with partial truth.
 
 ---
 
-## Phishing Variants
-- **Phishing** → broad campaign.  
-- **Spear Phishing** → targeted.  
-- **Whaling** → execs.  
-- **Business Email Compromise (BEC)** → trusted accounts.  
-- **Smishing/Vishing** → via SMS or phone.  
-- **Indicators**: urgency, odd sender, poor grammar, mismatched URLs.
+## Task 3 – Phishing Family
+- **Phishing** → Mass email bait.  
+- **Spear Phishing** → Targeted individuals.  
+- **Whaling** → Targeting executives.  
+- **BEC (Business Email Compromise)** → Hijacking business accounts.  
+- **Vishing/Smishing** → Voice/SMS phishing.
 
 ---
 
-## Frauds & Campaigns
-- **Identity fraud / invoice scams**.  
-- **Disinformation** (intentional false info).  
-- **Misinformation** (unintentional).  
-- **Dumpster diving, shoulder surfing, baiting.**
+## Task 4 – Other Attacks
+- Dumpster diving, shoulder surfing, hoaxes, diversion theft.  
+- Influence campaigns: misinformation vs. disinformation.  
 
 ---
 
-## 📝 Key Terms
-BEC, Pretexting, Watering Hole, Typosquatting, Smishing, Whaling
+## Key Terms
+Phishing, Spear Phishing, Whaling, BEC, Typosquatting, Watering Hole
 
 ---
 
-## 🧩 Practice Prompts
-- Give 4 signs of phishing email.  
-- Explain the difference between misinformation and disinformation.  
-- Define BEC and one mitigation strategy.  
+## Practice Prompts
+- What are 3 psychological triggers social engineers exploit?  
+- Give one example of a phishing variant and mitigation.  
+- Define “pretexting” with an example.
