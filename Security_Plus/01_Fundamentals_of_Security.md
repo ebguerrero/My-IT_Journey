@@ -1,66 +1,62 @@
-# 01 — Fundamentals of Security
-
-Learn the core ideas that underlie all other Security+ topics (CIA, AAA, controls, risk).
-
----
+# 01 – Fundamentals of Security
 
 ## 🎯 Learning Objectives
-- Explain the **CIA triad** and **non-repudiation**.  
-- Describe **AAA** (Authentication, Authorization, Accounting).  
-- Compare **control categories** and **control types**.  
-- Define **risk**, **threat**, and **vulnerability**.
+- Compare and contrast **security control categories** and **control types**.
+- Explain **CIA Triad** and supporting concepts (Non-repudiation, AAA).
+- Define **risk, threats, vulnerabilities**, and **Zero Trust**.
 
 ---
 
-## Task 1 — Core Concepts
-- **Information Security**: Protecting confidentiality, integrity, availability of information.  
-- **CIA triad**:
-  - **Confidentiality** — keep data secret (encryption, ACLs).  
-  - **Integrity** — data unaltered (hashing, signing).  
-  - **Availability** — services/data available when needed (redundancy, backups).
-- **Non-repudiation**: Proof that an action originated from a particular entity (digital signatures, audited logs).
+## Core Concepts
+- **Information Security**: protection of data from unauthorized access, alteration, disclosure, or destruction.  
+- **CIA Triad**:
+  - **Confidentiality** → keeping data secret (e.g., encryption).
+  - **Integrity** → ensuring data is accurate/unaltered (e.g., hashing).
+  - **Availability** → ensuring systems/data are available (e.g., redundancy, backups).
+- **Non-repudiation**: cannot deny sending/receiving (e.g., digital signatures).
+- **AAA**: Authentication, Authorization, Accounting.
 
 ---
 
-## Task 2 — AAA & Identity
-- **Authentication** — verify identity (passwords, MFA, certificates).  
-- **Authorization** — permissions / access control (RBAC, ABAC).  
-- **Accounting** — logging and audit trails (SIEM ingestion).
-
----
-
-## Task 3 — Controls (Categories & Types)
+## Security Controls
 - **Categories**:
-  - **Technical** — firewalls, EDR, encryption.
-  - **Managerial** — policies, risk assessments.
-  - **Operational** — procedures, awareness training.
-  - **Physical** — locks, CCTV, guards.
+  - **Managerial** → policies, governance, risk mgmt.
+  - **Operational** → processes, awareness, incident response.
+  - **Technical** → software/hardware (firewalls, EDR, encryption).
+  - **Physical** → locks, fences, guards.
 - **Types**:
-  - **Preventive** — block events (firewall).
-  - **Detective** — find events (IDS, SIEM).
-  - **Corrective** — remediate (patching).
-  - **Deterrent / Compensating / Directive** — policy signs, alternative measures, rules.
+  - Preventive
+  - Detective
+  - Corrective
+  - Deterrent
+  - Compensating
+  - Directive  
+
+💡 **Tip**: Category = who/where, Type = what it does.
 
 ---
 
-## Task 4 — Risk vs Threat vs Vulnerability
-- **Threat**: potential event/actor causing harm.  
-- **Vulnerability**: weakness that can be exploited.  
-- **Risk**: the likelihood and impact when a threat leverages a vulnerability.  
-- **Risk formula (concept)**: Risk = Likelihood × Impact.
+## Risk, Threat, Vulnerability
+- **Threat** → potential cause of harm.
+- **Vulnerability** → weakness exploitable by a threat.
+- **Risk** = Threat × Vulnerability.  
+  → If one is missing, risk ≈ 0.
 
 ---
 
-## Key Terms
-- CIA, AAA, MFA, RBAC, ABAC, Hash, Digital signature, Non-repudiation, Residual risk
+## Zero Trust
+Principle: **“Never trust, always verify.”**  
+- **Control plane**: authentication, policy engines, secure zones.  
+- **Data plane**: subjects, enforcement points, continuous validation.  
 
 ---
 
-## Practice Prompts
-- Define **integrity** and list two mechanisms that enforce it.  
-- Give one **preventive**, one **detective**, and one **corrective** control.  
-- Explain how **authorization** differs from **authentication**.
+## 📝 Key Terms
+CIA, Non-repudiation, AAA, Zero Trust, Policy Engine, PEP, Preventive/Detective controls
 
 ---
 
-> Notes: distilled and paraphrased from my Dion Training study guide for Security+.
+## 🧩 Practice Prompts
+- Give examples of Confidentiality, Integrity, and Availability controls.  
+- List the 4 categories of controls with one example each.  
+- Define risk in terms of threat and vulnerability.  
