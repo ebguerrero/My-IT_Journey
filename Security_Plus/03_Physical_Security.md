@@ -1,50 +1,54 @@
-# 03 — Physical Security
-
-Physical controls, surveillance, and entry protection.
-
----
+# 03 – Physical Security
 
 ## 🎯 Learning Objectives
-- Explain perimeter & entry controls.  
-- Identify surveillance methods and common bypasses.  
-- Describe anti-tailgating and badge-cloning mitigations.
+- Identify **physical security controls**: barriers, guards, surveillance.
+- Recognize **entry control technologies**.
+- Explain **badge cloning** and mitigation strategies.
 
 ---
 
-## Task 1 — Perimeter & Barriers
-- **Fencing, gates, bollards** — deter vehicle/foot intrusion.  
-- **Vehicle barriers** (ram-resistant), lighting, signage.
+## Perimeter Security
+- **Fences** → people deterrent.
+- **Bollards/Barriers** → stop vehicles.  
+- **Guards** → active response, deterrence.
+- Attack vectors: ramming, tampering, bypassing guards.
 
 ---
 
-## Task 2 — Surveillance & Sensors
-- **Video (CCTV)**, motion sensors, IR, door sensors.  
-- Failures: power/cable/tamper, blind spots, poor retention/config.
+## Surveillance & Monitoring
+- **CCTV** (motion, infrared, PTZ).  
+- **Lighting** → reduces blind spots.  
+- **Sensors**: IR, pressure, ultrasonic, microwave.  
+- Attackers may try to **blind, obstruct, or tamper** with these systems.
 
 ---
 
-## Task 3 — Access Controls
-- **Badge readers (RFID/NFC)**, PINs, biometrics (fingerprint, iris).  
-- Anti-tailgating: mantraps, turnstiles, security guards, badge / biometric combo.
+## Controlled Entry
+- **Access control vestibules** → prevent tailgating.  
+- **Door locks**: traditional, cipher, electronic (RFID/NFC/BLE).  
+- **Biometrics**:
+  - FAR = False Acceptance Rate
+  - FRR = False Rejection Rate
+  - CER = Crossover Error Rate
 
 ---
 
-## Task 4 — Badge Cloning & Mitigations
-- Attack: read badge, clone data, reuse.  
-- Mitigations: encrypted badges, multifactor (badge + PIN), monitor anomalies, limit privileges by location/time.
+## Badge Cloning
+Steps: scan → extract → write → use.  
+**Defenses**:
+- Encrypted badges
+- MFA
+- Shielded sleeves
+- Updated protocols
 
 ---
 
-## Key Terms
-- Tailgating, piggybacking, FAR, FRR, access control vestibule, mantrap
+## 📝 Key Terms
+Tailgating, Piggybacking, FAR, FRR, CER, RFID/NFC
 
 ---
 
-## Practice Prompts
-- Where would you place 3 cameras for max coverage? Explain.  
-- List three mitigations for badge cloning.  
-- Describe the difference between a mantrap and a turnstile.
-
----
-
-> Notes: paraphrased and condensed from the Dion study guide.
+## 🧩 Practice Prompts
+- Explain the difference between tailgating and piggybacking.  
+- List 3 countermeasures to badge cloning.  
+- What is CER, and why is it important?  
