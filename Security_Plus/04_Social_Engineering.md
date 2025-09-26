@@ -1,49 +1,51 @@
-# 04 — Social Engineering
-
-Human attacks: phishing, impersonation, pretexting.
-
----
+# 04 – Social Engineering
 
 ## 🎯 Learning Objectives
-- Recognize social-engineering triggers and attack types.  
-- Identify phishing forms and BEC (business email compromise).  
-- Learn basic defenses and user-awareness controls.
+- Understand **psychological triggers** used by attackers.
+- Recognize **phishing types**.
+- Identify additional tactics (dumpster diving, shoulder surfing).
 
 ---
 
-## Task 1 — Psychology & Triggers
-- Common triggers: **Authority**, **Urgency**, **Scarcity**, **Social proof**, **Fear**, **Reciprocity**.  
-- Attackers craft plausible pretexts to exploit these triggers.
+## People Hacking
+- Exploits **human psychology**.  
+- Triggers: Authority, Urgency, Scarcity, Likability, Fear, Social Proof.
 
 ---
 
-## Task 2 — Phishing & Variants
-- **Phishing** (broad), **Spear phishing** (targeted), **Whaling** (executive), **BEC**, **Vishing** (voice), **Smishing** (SMS).  
-- Indicators: mismatched domain, odd requests, urgent language, strange attachments/links.
+## Common Tactics
+- **Impersonation** → posing as trusted individual.
+- **Pretexting** → partial truth, victim fills in gaps.
+- **Brand impersonation** → fake logos, emails.
+- **Typosquatting** → fake lookalike domains.
+- **Watering Hole Attack** → compromise sites visited by target group.
 
 ---
 
-## Task 3 — Impersonation & Info Gathering
-- **Pretexting**: build a believable story (call, email).  
-- **Watering hole**: compromise a site frequented by targets.  
-- **Dumpster diving** & shoulder surfing: physical info theft.
+## Phishing Variants
+- **Phishing** → broad campaign.  
+- **Spear Phishing** → targeted.  
+- **Whaling** → execs.  
+- **Business Email Compromise (BEC)** → trusted accounts.  
+- **Smishing/Vishing** → via SMS or phone.  
+- **Indicators**: urgency, odd sender, poor grammar, mismatched URLs.
 
 ---
 
-## Task 4 — Defenses
-- Security awareness training, simulated phishing, DMARC/SPF/DKIM email controls, MFA, escalation/escrow processes for financial requests.
+## Frauds & Campaigns
+- **Identity fraud / invoice scams**.  
+- **Disinformation** (intentional false info).  
+- **Misinformation** (unintentional).  
+- **Dumpster diving, shoulder surfing, baiting.**
 
 ---
 
-## Key Terms
-- BEC, whaling, spear phishing, pretexting, typosquatting, water-holing
+## 📝 Key Terms
+BEC, Pretexting, Watering Hole, Typosquatting, Smishing, Whaling
 
 ---
 
-## Practice Prompts
-- Create 5 quick phishing indicators to include in staff training.  
-- Describe one technical control and one human control to mitigate BEC.
-
----
-
-> Notes: condensed from the Dion Training guide.
+## 🧩 Practice Prompts
+- Give 4 signs of phishing email.  
+- Explain the difference between misinformation and disinformation.  
+- Define BEC and one mitigation strategy.  
