@@ -1,48 +1,44 @@
-# 02 – Threat Actors & Vectors
+# 02 — Threat Actors & Vectors
 
 ## 🎯 Learning Objectives
-- Identify **types of threat actors**, their motivations, and sophistication.
-- Explain **threat vectors** and **attack surfaces**.
-- Understand **deception technologies** like honeypots.
+- Identify common threat actors and their motivations.  
+- Explain **threat vectors** vs. **attack surfaces**.  
+- Recognize deception technologies.
 
 ---
 
-## Types of Threat Actors
-- **Script Kiddies** → low skill, use pre-made tools.
-- **Hacktivists** → politically/ideologically motivated.
-- **Organized Crime** → profit-driven (fraud, ransomware).
-- **Nation-state/APT** → well-resourced, strategic, long dwell time.
-- **Insiders** → malicious, negligent, or compromised employees/contractors.
+## Task 1 – Who Attacks?
+- **Script Kiddies** → Low-skill attackers using premade tools.  
+- **Hacktivists** → Politically/ideologically motivated.  
+- **Organized Crime** → Profit-driven, professionalized (fraud, ransomware).  
+- **Nation-State/APT** → Highly skilled, long-term espionage or disruption.  
+- **Insiders** → Malicious, negligent, or compromised employees/contractors.
 
-**Motives**: financial gain, espionage, disruption, revenge, ideology, warfare.
-
----
-
-## Threat Vectors
-- **Email, SMS, Web, Images, Files, Removable Media**
-- **Wireless** (insecure Wi-Fi, Bluetooth)
-- **Physical** access
-- **Supply chain** compromises
-
-**Attack Surface** = total possible entry/exit points.  
-→ Minimize by disabling unused services, restricting access, hardening configs.
+**Motivations:** money, ideology, espionage, reputation damage, sabotage.
 
 ---
 
-## Deception & Disruption
-- **Honeypots/Honeynets** → lure attackers, log actions.
-- **Honeyfiles/Tokens** → fake sensitive data.
-- **Bogus DNS entries** / decoy directories.
-- **Spoofed telemetry** or false flags.
+## Task 2 – Threat Vectors & Attack Surface
+- **Vector** = “How the attack happens” (phishing, USB drops, Wi-Fi exploits).  
+- **Attack Surface** = “Where the attack can hit” (network ports, exposed apps, physical doors).  
+- Reduce surface area by removing unused software/services, applying least privilege, disabling old protocols.
 
 ---
 
-## 📝 Key Terms
-APT, Insider Threat, Threat Vector, Attack Surface, Honeypot, Honeyfile
+## Task 3 – Deception & Disruption
+- **Honeypots/Honeynets** = decoy systems to trap attackers.  
+- **Honeyfiles/Honeytokens** = fake credentials/files to detect access attempts.  
+- **Bogus DNS/decoy services** to confuse attackers.  
+- **Spoofed telemetry** to waste attacker time.
 
 ---
 
-## 🧩 Practice Prompts
-- Compare threat actor motivations for hacktivists vs nation-states.  
-- Define the difference between a **vector** and **attack surface**.  
-- What role does a honeypot play in defense?  
+## Key Terms
+TTPs (Tactics, Techniques, Procedures), Honeypot, Insider Threat, Attack Surface
+
+---
+
+## Practice Prompts
+- Give 3 motivations for nation-state attackers.  
+- Contrast vector vs. surface with an example.  
+- What is a honeypot and how is it used?
