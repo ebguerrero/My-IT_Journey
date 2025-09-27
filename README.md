@@ -9,7 +9,7 @@ I'm a retired Air Force officer (20 years service), Security+ certified, and cur
 - Transition into a professional cybersecurity role
 
 ## Repository Layout
-- **Security+/** > Study notes, objectives, quick references
+- **Security+/** > Completed certification path (study strategy, tools, lessons learned)
 - **PenTest+/** > Exam prerp and lab notes
 - **TryHackMe/** > Redacted lab write-ups & progress
 - **Scripts/** > Small tools in Python, PowerShell, Bash
