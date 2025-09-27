@@ -16,7 +16,7 @@ I’m not publishing third-party course materials; instead this page summarizes 
 
 ## ✅ Certification 
 - **Verification link:**  https://www.certmetrics.com/comptia/public/verification.aspx
-- **Verification code: 1G9SJ04Q0JF1Q592
+- **Verification code:** 1G9SJ04Q0JF1Q592
 
 
 ---
