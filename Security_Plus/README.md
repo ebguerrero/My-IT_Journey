@@ -21,15 +21,19 @@ I’m not publishing third-party course materials; instead this page summarizes 
 
 ---
 
-## 🔑 Key Takeaways
-- **CIA Triad** (Confidentiality, Integrity, Availability) is the core lens for evaluating controls.  
-- **AAA** (Authentication, Authorization, Accounting) underpins identity and access management.  
-- **Risk basics:** Risk ≈ Threat × Vulnerability × Impact; treat via Avoid/Accept/Transfer/Mitigate.  
-- **Zero Trust:** “Never trust, always verify.” Enforce least privilege and continuous evaluation.  
-- **Threats:** Social engineering, malware, insider threats, organized crime, and nation-state actors.  
-- **Controls:** Preventive, Detective, Corrective, Deterrent, Compensating, and Physical controls.  
-- **Crypto basics:** Hashing vs. encryption, symmetric vs. asymmetric, PKI, digital signatures.  
-- **Incident response:** Prep → ID → Contain → Eradicate → Recover → Lessons Learned.
+## 🔑 Key Takeaways from Security+ (SY0-701)
+
+- **Core Principles** → CIA Triad (Confidentiality, Integrity, Availability) is the foundation of security; layered with AAA (Authentication, Authorization, Accounting).  
+- **Risk & Governance** → Risk ≈ Threat × Vulnerability × Impact; organizations manage risk through policies, frameworks (NIST, ISO), and treatments (Avoid, Accept, Transfer, Mitigate).  
+- **Zero Trust** → “Never trust, always verify.” Identity, least privilege, and continuous monitoring are mandatory in modern networks.  
+- **Threat Landscape** → Social engineering, malware, ransomware, insider misuse, organized crime, hacktivists, and nation-state Advanced Persistent Threats (APTs).  
+- **Security Controls** → Preventive, Detective, Corrective, Deterrent, Compensating, Physical; aligned to Technical, Managerial, and Operational categories.  
+- **Cryptography** → Hashing vs. encryption, symmetric vs. asymmetric, PKI, digital certificates, TLS, and digital signatures to ensure integrity and trust.  
+- **Identity & Access Management** → MFA, SSO, federation, LDAP/Active Directory, biometrics, and cloud IAM models.  
+- **Network & Host Security** → Firewalls, IDS/IPS, VPNs, segmentation, endpoint detection/response (EDR), patch management, and secure protocols.  
+- **Incident Response & Forensics** → Phases: Preparation → Identification → Containment → Eradication → Recovery → Lessons Learned; evidence integrity and chain of custody.  
+- **Business Continuity & Resilience** → Backups, redundancy, disaster recovery (RTO/RPO), fault tolerance, and high availability to ensure uptime.  
+
 
 ---
 
