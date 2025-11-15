@@ -19,4 +19,4 @@ I'm a retired Air Force officer (20 years service), Security+ certified, and cur
 - ## Current Focus
 - Security+ Certified (July 2025)
 - TryhackMe Junior Penetration Tester Path
-- Preparing for PenTest+
+- Preparing for OSCP+
