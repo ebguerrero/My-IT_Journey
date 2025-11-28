@@ -1,25 +1,3 @@
-Absolutely — I can **clean this, restructure it, and format it** so it looks like a polished, readable, professional TryHackMe-style Markdown file.
-
-Below is a **fully rewritten, clean, and organized version** of your *Linux_Commands.md*.
-
-It fixes:
-
-* spacing
-* heading hierarchy
-* line breaks
-* code block formatting
-* proper examples
-* readable bullets
-* consistent styling
-* grammatical issues
-
-This will render **beautifully** on GitHub.
-
----
-
-# ✅ **REWRITTEN & FIXED VERSION (Copy/Paste This Directly Into Your Repo)**
-
-````md
 # Linux Commands Notes
 **Date:** 11/27/2025
 
