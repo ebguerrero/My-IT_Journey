@@ -1,28 +1,181 @@
+Absolutely — I can **clean this, restructure it, and format it** so it looks like a polished, readable, professional TryHackMe-style Markdown file.
+
+Below is a **fully rewritten, clean, and organized version** of your *Linux_Commands.md*.
+
+It fixes:
+
+* spacing
+* heading hierarchy
+* line breaks
+* code block formatting
+* proper examples
+* readable bullets
+* consistent styling
+* grammatical issues
+
+This will render **beautifully** on GitHub.
+
+---
+
+# ✅ **REWRITTEN & FIXED VERSION (Copy/Paste This Directly Into Your Repo)**
+
+````md
 # Linux Commands Notes
-# 11/27/2025
+**Date:** 11/27/2025
 
+---
 
-## nano
-**Purpose:** Edit text files from the command line.
-**Example:** nano myfile.txt
+## 📝 nano
+**Purpose:** Edit text files directly from the command line.
 
-## du (du --help, man du)
-**Purpose:** short for disk usage, is a linux command which helps you identify what files/directories are consuming how much space.
-**Flags:** -a: will list all files and directories, instead of just directories only, -h: will list the file sizes in human readable format (B,MB,KB,GB), -c using this flag will print the total size at the end just in case you want to find the size of directory you were enumerating, -d<number>: to specify the depth-ness of a directory you want to view the results for (eg. -d 1 = show only top-level folders), --time: show the last modification timestamp for each entry 
-**Example:** typing the command: du <directory>  **Explanation:** You'll see output like 3409  ./Documents    9182 ./Downloads, The folders in their respective folders are listed with the size they occupy on the disk. The size whos may be in B, MB, KB, GB. The files inside a folder are not shown, only the folders are listed by running du/<directory> command. By default, sizes are shown in KB. It recursively wlaks through deeper directories unless you control it with flags. **List every file inside /home with its size** du -a /home/ **Filter results using grep** du -a /home/ | grep user (Shows any item containing "user" in its name), **Show directory sizes in readable units** du -h /var/log **Show sizes up to depth 2** du -h -d 2 /etc **Show modification timestamps with depth 1** du --time -d 1
+**Usage:**
+```bash
+nano myfile.txt
+````
 
-## grep (grep --help, man grep)
-**Purpose:** to filter text, displaying only the lines that contain a match for a given pattern. Allows for quick extraction relevant information from files of any text-based data.
-**Example:** to search for the word "error" in a file named logfile.txt, the command would be: grep "error" logfile.txt
-**Flags:** -i: Ignore case-sensitive during the search, -v: invert the match and shows all lines that do not containt the word, -n: displays all matching lines with their correspdonding line numbers. 
+---
 
+## 📦 du — Disk Usage
 
--R (grep -R "pattern" /path/to/directory): The option that enables recursive searching and follows symbolic links
-"pattern": The text or regular expression you are searching for. Enclosed in double quotes if it contains spaces or special chars
-/path/to/directory: The starting directory for the recursive search. If you want to search the current directory, you can use "."
-**Example:** Searching for a specific word in the current directory and its subdirectories: grep -R "example_word" . (the . is part of the command)
-**Example:** Searching for a pattern in a specific direcory and its subdirectories: grep -R "error_code" /var/log
-**Example:** Combining with other options: Case-insensitive search: grep -Ri "search_term" /home/user/documents
+*(du --help, man du)*
 
--h
+**Purpose:**
+`du` (disk usage) shows how much space files and directories consume on disk.
+By default, `du`:
 
+* shows size in **kilobytes (KB)**
+* lists **directories only** (not files)
+* walks recursively through subdirectories
+
+---
+
+### 🔧 Flags
+
+| Flag       | Description                                           |
+| ---------- | ----------------------------------------------------- |
+| `-a`       | List **all files and directories**, not just folders  |
+| `-h`       | Human-readable sizes (1K, 4M, 2G)                     |
+| `-c`       | Show a **grand total** at the end                     |
+| `-d <num>` | Limit directory depth (e.g., `-d 1` = top-level only) |
+| `--time`   | Show last modification timestamp                      |
+
+---
+
+### 🧪 Examples
+
+#### List every file inside /home with its size:
+
+```bash
+du -a /home/
+```
+
+#### Filter results using grep (example: match "user"):
+
+```bash
+du -a /home/ | grep user
+```
+
+#### Human-readable units:
+
+```bash
+du -h /var/log
+```
+
+#### Show directory sizes up to depth 2:
+
+```bash
+du -h -d 2 /etc
+```
+
+#### Show modification timestamps (depth 1):
+
+```bash
+du --time -d 1 .
+```
+
+---
+
+### 📘 Output Example
+
+Running:
+
+```bash
+du ./Documents
+```
+
+You may see:
+
+```
+3409    ./Documents
+9182    ./Downloads
+```
+
+Each line shows:
+
+* size
+* path
+* **sizes represent disk blocks unless `-h` is used**
+
+---
+
+## 🔍 grep — Pattern Searching
+
+*(grep --help, man grep)*
+
+**Purpose:**
+`grep` searches text for matching patterns. It is used to quickly extract relevant lines from files, outputs, and directories.
+
+---
+
+### 🔧 Flags
+
+| Flag | Description                                     |
+| ---- | ----------------------------------------------- |
+| `-i` | Case-insensitive search                         |
+| `-v` | Invert match (show lines *without* the pattern) |
+| `-n` | Show line numbers for matches                   |
+| `-R` | Recursive search through directories            |
+
+---
+
+### 🧪 Examples
+
+#### Search for the word "error" in a file:
+
+```bash
+grep "error" logfile.txt
+```
+
+#### Case-insensitive search:
+
+```bash
+grep -i "error" logfile.txt
+```
+
+#### Recursive search in current directory:
+
+```bash
+grep -R "example_word" .
+```
+
+#### Search a specific directory and subdirectories:
+
+```bash
+grep -R "error_code" /var/log
+```
+
+#### Combine flags: recursive + case-insensitive:
+
+```bash
+grep -Ri "search_term" /home/user/documents
+```
+
+---
+
+## 📘 Bonus: Check file owner and metadata
+
+Use `stat` when you need owner, permissions, timestamps, or inode details:
+
+```bash
+stat filename.txt
+```
