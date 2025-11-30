@@ -314,6 +314,3 @@ When matching common formats (emails, URLs, IP addresses), reuse trusted express
 
 ---
 
-# 🚀 Keep practicing — regex mastery scales with use.
-
-```
